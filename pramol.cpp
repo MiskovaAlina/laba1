@@ -10,7 +10,7 @@ int main(){
     int chodelat; char c;
     while (1) {
         
-        cout << "Выберите режим:" << endl << "1) Перимерт" << endl << "2) Площадь" << endl << "3) Длина диагонали" << endl;
+        cout << "Выберите режим:" << endl << "1) Perimetr" << endl << "2) Площадь" << endl << "3) Длина диагонали" << endl;
         cin >> chodelat;
 
         switch (chodelat)
@@ -19,6 +19,15 @@ int main(){
             double dlina, sirina;
         cout << "Введите длину и ширину для расчета периметра:";
         cin >> dlina >> sirina;
+         if (dlina < 0){
+                cout << "nelza mense nyla dliny" << endl;
+                return 0; 
+            }
+            if (sirina < 0){
+                cout << "nelza mense nyla siriny" << endl;
+                return 0; 
+            }
+        
             double per = (dlina + sirina)*2;
             cout << per << endl;
         break;
